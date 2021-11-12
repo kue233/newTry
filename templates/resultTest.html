@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .total{
+                display:table;
+            }
+            .leftBar{
+                display:table-cell;
+                vertical-align:top;
+            }
+            .right{
+                display:table-cell;
+                vertical-align:top;
+            }
+
+        </style>
+    </head>
+    <body>
+    <div class='total'>
+        <div class='leftBar'>
+
+
+            <h4 style='margin-left:10px;'>choose options for your ticker: </h4>
+            <div class='date'>
+                <label for="start">start date:</label>
+                <input type='date' name='start' value="2020-01-01"/>
+                <label for="end">end date:</label>
+                <input type='date' name='end' value="2021-05-01"/>
+            </div>
+
+
+            <div class='prmopt'>
+                <label for="yValue">y value:</label>
+                <select name='yValue'>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+                <option value="Open">Open</option>
+                <option value="Close">Close</option>
+                <option value="Volume">Volume</option>
+                <option value="Adj Close">Adj Close</option>
+                </select>
+            </div>
+
+            <div class='graphtype'>
+                <label for="graphtype">graph type:</label>
+                <select name='graphtype'>
+                <option value="Area">Area</option>
+                <option value="Line">Line</option>
+                </select>
+            </div>
+
+            <div class='QQQ'>
+                <label for="QQQ">if you want to use all QQQ stock tickers:</label>
+                <br>
+                <select name='QQQ'>
+                <option value="QQQ">QQQ</option>
+                <option value="other" selected>other(enter yourself)</option>
+                </select>
+            </div>
+
+            
+            
+            <div style='position:absolute; display:inline-block; padding-left:20px; padding-top:30px;'>
+                <input type="text" name='ticker'/>
+                <input type='submit' name='submit' value='submit'/>
+            </div>
+            <hr>
+        </div>
+
+        <div class='right'>
+            <object class='ticker' data='C:\Users\kue84\FlaskTest\flaskTest\static\ticker\index.html' width='960' height='850'></object>
+        </div>
+    </div>
+    </body>
+</html>
